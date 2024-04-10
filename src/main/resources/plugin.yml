@@ -1,0 +1,4 @@
+name: TakenAPI
+version: '${version}'
+main: xyz.steffq.takenapi.TakenAPI
+api-version: '1.20'
