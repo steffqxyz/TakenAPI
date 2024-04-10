@@ -4,6 +4,9 @@ apply plugin: 'maven-publish'
 group = 'xyz.steffq'
 version = '1.0-SNAPSHOT'
 
+java {
+}
+
 repositories {
     mavenCentral()
     mavenLocal()
