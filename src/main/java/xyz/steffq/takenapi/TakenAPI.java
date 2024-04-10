@@ -1,17 +1,15 @@
 package xyz.steffq.takenapi;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import org.yaml.snakeyaml.Yaml;
+import xyz.steffq.takenapi.configuration.YamlConfig;
+import xyz.steffq.takenapi.logger.TakenLog;
 
-public final class TakenAPI extends JavaPlugin {
+import javax.annotation.Nullable;
 
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
+public interface TakenAPI {
 
-    }
+    @Nullable
+    YamlConfig getConfigYml();
+    TakenLog getLogger();
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }

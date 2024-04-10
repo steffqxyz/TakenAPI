@@ -1,2 +1,4 @@
-package xyz.steffq.takenapi.exceptions;public class MenuManagerNotSetupException {
+package xyz.steffq.takenapi.exceptions;
+
+public class MenuManagerNotSetupException extends Exception {
 }
