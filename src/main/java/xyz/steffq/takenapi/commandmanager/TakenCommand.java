@@ -83,7 +83,7 @@ public abstract class TakenCommand extends BukkitCommand implements CommandExecu
         MiniColor.ALL.deserialize(getUsage());
     }
 
-    public boolean execute(CommandSender sender, String alias, String[] args) {
+    public boolean execute(@NotNull CommandSender sender, @NotNull String alias, String[] args) {
 
         if (args.length < minArguments || (args.length > maxArguments && maxArguments != -1)) {
             sendUsage(sender);
@@ -103,8 +103,7 @@ public abstract class TakenCommand extends BukkitCommand implements CommandExecu
             sender.sendMessage(MiniColor.ALL.deserialize("<dark_red>You do not have permission to execute this command."));
             return true;
         }
-        if (delayedPlayers != null && sender instanceof Player) {
-            Player player = (Player) sender;
+        if (delayedPlayers != null && sender instanceof Player player) {
 
             if (delayedPlayers.contains(player.getName())) {
                 player.sendMessage(MiniColor.ALL.deserialize("<green>Please wait before using this command again."));
@@ -132,9 +131,9 @@ public abstract class TakenCommand extends BukkitCommand implements CommandExecu
 
     public abstract boolean onCommand(CommandSender sender, String[] args);
 
-    public abstract String getUsage();
-    public abstract List<String> getAliases();
-    public abstract String getDescription();
+    public abstract @NotNull String getUsage();
+    public abstract @NotNull List<String> getAliases();
+    public abstract @NotNull String getDescription();
 
 
 
