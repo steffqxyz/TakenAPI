@@ -9,6 +9,7 @@
   <a href="paypal.me/steffqxyz" target="_blank">
     <img src="https://img.shields.io/static/v1?message=PayPal&logo=paypal&label=&color=00457C&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="paypal logo"  />
   </a>
+  [![](https://jitpack.io/v/steffqxyz/TakenAPI.svg)](https://jitpack.io/#steffqxyz/TakenAPI)
 </div>
 
 ###
