@@ -18,10 +18,10 @@ public class MenuItem extends ItemStack {
         ItemMeta meta = this.getItemMeta();
         if (meta != null) {
             if (displayName != null) {
-                meta.displayName(MiniColor.ALL.deserialize(displayName));
+                meta.displayName(MiniColor.TEXT.deserialize(displayName));
             }
             if (lore != null && lore.length > 0) {
-                meta.lore(MiniColor.ALL.deserialize(Arrays.asList(lore)));
+                meta.lore(MiniColor.TEXT.deserialize(Arrays.asList(lore)));
             }
 
             setItemMeta(meta);
@@ -73,7 +73,7 @@ public class MenuItem extends ItemStack {
     public void setLore(String... lore) {
         ItemMeta meta = this.getItemMeta();
         if (meta != null) {
-            meta.lore(MiniColor.ALL.deserialize(Arrays.asList(lore)));
+            meta.lore(MiniColor.TEXT.deserialize(Arrays.asList(lore)));
             setItemMeta(meta);
         }
         update();

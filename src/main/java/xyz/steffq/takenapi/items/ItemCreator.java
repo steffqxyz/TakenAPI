@@ -39,8 +39,8 @@ public class ItemCreator {
 
         ItemStack item = new ItemStack(material, amount);
         ItemMeta meta = item.getItemMeta();
-        meta.displayName(MiniColor.ALL.deserialize(displayName));
-        meta.lore(MiniColor.ALL.deserialize(lore));
+        meta.displayName(MiniColor.TEXT.deserialize(displayName));
+        meta.lore(MiniColor.TEXT.deserialize(lore));
 
         if (glow) {
             meta.addEnchant(Enchantment.LUCK, 1, true);

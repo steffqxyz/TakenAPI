@@ -17,7 +17,7 @@ public class Menu implements InventoryHolder {
     private Map<Integer, MenuItem> items = new HashMap<>();
 
     public Menu(String title, int rows) {
-        this.inventory = Bukkit.createInventory(this, 9 * rows, MiniColor.ALL.deserialize(title));
+        this.inventory = Bukkit.createInventory(this, 9 * rows, MiniColor.TEXT.deserialize(title));
     }
 
     @Override
