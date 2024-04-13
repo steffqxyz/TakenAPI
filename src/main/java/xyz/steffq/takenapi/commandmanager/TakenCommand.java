@@ -49,10 +49,13 @@ public abstract class TakenCommand extends BukkitCommand implements CommandExecu
         this.minArguments = minArguments;
         this.maxArguments = maxArguments;
         this.playerOnly = playerOnly;
+    }
+
+    public void register() {
         CommandMap commandMap = getCommandMap();
 
         if (commandMap != null) {
-            commandMap.register(command, this);
+            commandMap.register(getName(), this);
         }
     }
 
@@ -80,7 +83,7 @@ public abstract class TakenCommand extends BukkitCommand implements CommandExecu
     }
 
     public void sendUsage(CommandSender sender) {
-        MiniColor.ALL.deserialize(getUsage());
+        sender.sendMessage(MiniColor.ALL.deserialize(getUsage()));
     }
 
     public boolean execute(@NotNull CommandSender sender, @NotNull String alias, String[] args) {
