@@ -9,17 +9,13 @@ import xyz.steffq.takenapi.utils.MiniColor;
 
 public class TakenLog {
 
-    private static final String PREFIX;
-    private static final String DEBUG_PREFIX;
-    private static final String DIVIDER;
-
     private static boolean allowFormatting;
     private static boolean debugMode;
+    private static String debugPrefix;
+    private static String prefix;
+    private static String divider;
 
     static {
-        PREFIX = "[TakenAPI] ";
-        DEBUG_PREFIX = "[<yellow>i<reset>] ";
-        DIVIDER = "-----------------------------------";
         allowFormatting = true;
         debugMode = false;
     }
@@ -28,17 +24,19 @@ public class TakenLog {
         final YamlConfig config = Taken.getAPI().getConfigYml();
         allowFormatting = config.options().getBoolean("logging.formatting", true);
         debugMode = config.options().getBoolean("logging.debug-mode", false);
+        debugPrefix = config.options().getString("logging.debug-prefix", "<yellow>i<reset>");
+        prefix = config.options().getString("logging.prefix", "[TakenAPI] ");
+        divider = config.options().getString("logging.divider", "-----------------------------------");
     }
 
     private static void send(@NotNull final TakenLogLevels level, final boolean debug, @NotNull final String... input) {
-        String prefix = PREFIX;
 
         if (debug) {
             if (!debugMode) {
                 return;
             }
 
-            prefix += DEBUG_PREFIX;
+            prefix += debugPrefix;
         }
 
         for (final String i : input) {
@@ -70,18 +68,18 @@ public class TakenLog {
     }
 
     public static void divider(@NotNull final TakenLogLevels level, final boolean debug) {
-        send(level, debug, DIVIDER);
+        send(level, debug, divider);
     }
 
     public static void divider(@NotNull final TakenLogLevels level) {
-        send(level, false, DIVIDER);
+        send(level, false, divider);
     }
 
     public static void divider(final boolean debug) {
-        send(TakenLogLevels.INFO, debug, DIVIDER);
+        send(TakenLogLevels.INFO, debug, divider);
     }
 
     public static void divider() {
-        send(TakenLogLevels.INFO, false, DIVIDER);
+        send(TakenLogLevels.INFO, false, divider);
     }
 }

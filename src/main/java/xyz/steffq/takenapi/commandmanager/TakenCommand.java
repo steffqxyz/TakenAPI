@@ -128,7 +128,7 @@ public abstract class TakenCommand extends BukkitCommand implements CommandExecu
         return true;
     }
 
-    public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String alias, String[] args) {
         return this.onCommand(sender, args);
     }
 

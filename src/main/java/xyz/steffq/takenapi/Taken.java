@@ -2,6 +2,7 @@ package xyz.steffq.takenapi;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+import xyz.steffq.takenapi.logger.TakenLog;
 
 public class Taken {
 
@@ -9,6 +10,7 @@ public class Taken {
 
     public static void onLoad(@NotNull final TakenAPI plugin) {
         Taken.api = plugin;
+        TakenLog.onLoad();
     }
 
     public static JavaPlugin getPlugin() {
