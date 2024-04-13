@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/steffqxyz/TakenAPI.svg)](https://jitpack.io/#steffqxyz/TakenAPI)
+                                      
 <div align="center">
   <img height="100" src="https://i.imgur.com/wVhmrpJ.jpeg"  />
 </div>
