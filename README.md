@@ -1,4 +1,5 @@
-
+[![](https://jitpack.io/v/steffqxyz/TakenAPI.svg)](https://jitpack.io/#steffqxyz/TakenAPI)
+                                      
 <div align="center">
   <img height="100" src="https://i.imgur.com/wVhmrpJ.jpeg"  />
 </div>
@@ -11,8 +12,6 @@
     <img src="https://img.shields.io/static/v1?message=PayPal&logo=paypal&label=&color=00457C&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="paypal logo"  />
   </a>
 </div>
-[![](https://jitpack.io/v/steffqxyz/TakenAPI.svg)](https://jitpack.io/#steffqxyz/TakenAPI)
-
 
 ###
 
