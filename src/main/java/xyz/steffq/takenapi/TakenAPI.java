@@ -21,6 +21,7 @@ public interface TakenAPI {
         * - preventMovement -> if you want to freeze a player then you will need to call this in the main class
         * @param e -> PlayerMoveEvent
      */
+    @Nullable
     FreezeManager getFreezeManager();
     /*
      * Get the ListenerManager instance
@@ -33,6 +34,7 @@ public interface TakenAPI {
      * @param plugin -> mainClass
      * 2nd option: you can make your own listener and register it and call getFreezeManager().preventMovement(e); then register it into the main class
      */
+    @Nullable
     ListenerManager getListenerManager();
     /*
      * Get the HotbarManager instance
@@ -48,6 +50,7 @@ public interface TakenAPI {
      * @param player -> Player
      * @param slot -> int
      */
+    @Nullable
     HotbarManager getHotbarManager();
     /*
      * Get the InventoryManager instance
@@ -60,6 +63,8 @@ public interface TakenAPI {
      * @param player -> Player
      * I suggest calling loadPlayerInventory then deletePlayerInventory to prevent any issues and to clear up space
      */
+    @Nullable
     InventoryManager getInventoryManager();
+
 
 }
