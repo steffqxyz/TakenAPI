@@ -3,6 +3,7 @@ package xyz.steffq.takenapi.menus.items;
 import java.util.Arrays;
 
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -54,6 +55,9 @@ public class MenuItem extends ItemStack {
     }
 
     public void onClick(int slot) {
+        // Override to implement logic
+    }
+    public void onClick(Player player) {
         // Override to implement logic
     }
 
