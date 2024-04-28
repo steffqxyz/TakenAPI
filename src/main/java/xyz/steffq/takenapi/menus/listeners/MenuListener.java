@@ -3,6 +3,7 @@ package xyz.steffq.takenapi.menus.listeners;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.Inventory;
@@ -22,12 +23,15 @@ public class MenuListener implements Listener {
 
             int slot = event.getSlot();
             Player player = (Player) event.getWhoClicked();
+            ClickType clickType = event.getClick();
             MenuItem menuItem = menu.getItem(slot);
 
             if (menuItem != null) {
                 menuItem.onClick();
                 menuItem.onClick(slot);
                 menuItem.onClick(player);
+                menuItem.onClick(clickType);
+                menuItem.onClick(player, clickType);
             }
         }
     }

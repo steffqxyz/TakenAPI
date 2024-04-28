@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -58,6 +59,12 @@ public class MenuItem extends ItemStack {
         // Override to implement logic
     }
     public void onClick(Player player) {
+        // Override to implement logic
+    }
+    public void onClick(Player player, ClickType clickType) {
+        // Override to implement logic
+    }
+    public void onClick(ClickType clickType) {
         // Override to implement logic
     }
 
