@@ -9,14 +9,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Command {
 
-    String value();
-
-    boolean requirePlayer() default false;
-
+    String name();
     int minArguments() default 0;
-
     int maxArguments() default 1000;
-
     String permission() default "";
+    String description() default "";
+    boolean requirePlayer() default false;
 
 }
